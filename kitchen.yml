@@ -1,0 +1,43 @@
+---
+driver:
+  name: dokken
+  privileged: true
+
+transport:
+  name: dokken
+
+provisioner:
+  name: dokken
+  chef_license: accept
+  deprecations_as_errors: false
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: ubuntu-22.04
+    driver:
+      image: dokken/ubuntu-22.04
+      pid_one_command: /bin/systemd
+
+suites:
+  - name: web
+    run_list:
+      - recipe[common]
+      - recipe[nginx]
+    attributes:
+      org:
+        lab_only: false
+        environment: kitchen
+    verifier:
+      inspec_tests:
+        - test/integration/web
+  - name: db
+    run_list:
+      - recipe[postgresql]
+    attributes:
+      org:
+        lab_only: false
+    verifier:
+      inspec_tests:
+        - test/integration/db

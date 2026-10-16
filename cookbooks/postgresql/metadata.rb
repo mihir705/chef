@@ -1,0 +1,6 @@
+name 'postgresql'
+maintainer 'mihir'
+license 'Apache-2.0'
+description 'Install PostgreSQL and create an application database'
+version '1.0.0'
+chef_version '>= 16.0'

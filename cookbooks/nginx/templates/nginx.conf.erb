@@ -1,0 +1,10 @@
+server {
+    listen <%= node['nginx']['listen_port'] %>;
+    server_name <%= node['nginx']['server_name'] %>;
+    root <%= node['nginx']['docroot'] %>;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}

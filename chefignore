@@ -1,0 +1,13 @@
+.kitchen
+.kitchen.local.yml
+.git
+.gitignore
+.vagrant
+.bundle
+spec
+test
+README.md
+Policyfile.lock.json
+Berksfile.lock
+*.swp
+.DS_Store

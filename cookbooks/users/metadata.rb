@@ -1,0 +1,6 @@
+name 'users'
+maintainer 'mihir'
+license 'Apache-2.0'
+description 'Manage Linux users from attributes'
+version '1.0.0'
+chef_version '>= 16.0'

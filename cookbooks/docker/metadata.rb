@@ -1,0 +1,6 @@
+name 'docker'
+maintainer 'mihir'
+license 'Apache-2.0'
+description 'Install Docker engine'
+version '1.0.0'
+chef_version '>= 16.0'

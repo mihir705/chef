@@ -1,0 +1,17 @@
+---
+name: cookstyle
+on:
+  push:
+  pull_request:
+jobs:
+  cookstyle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+      - name: Install cookstyle
+        run: gem install cookstyle
+      - name: Lint cookbooks
+        run: cookstyle cookbooks

@@ -1,0 +1,7 @@
+name 'nginx'
+maintainer 'mihir'
+license 'Apache-2.0'
+description 'Install and configure nginx'
+version '1.0.0'
+chef_version '>= 16.0'
+depends 'common'
